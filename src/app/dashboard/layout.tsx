@@ -7,7 +7,7 @@ interface DashboardLayoutProps {
 const layout = (props: DashboardLayoutProps) => {
   return (
     <div>
-      <nav className="bg-black text-white py-4 px-5  justify-between items-center">
+      <nav className="bg-black flex text-white py-4 px-5  justify-between items-center">
         <h3 className="text-xl">Logo</h3>
         <ul className="flex items-center gap-8">
           <li>Home</li>
@@ -16,7 +16,19 @@ const layout = (props: DashboardLayoutProps) => {
           <li>Login</li>
         </ul>
       </nav>
-      <main>{props.children}</main>
+
+      <div className="flex">
+        <div className="h-screen bg-black w-[15vw] text-white text-2xl">
+          <ul className="pt-5 flex flex-col gap-5 px-3">
+            <li>Dashboard</li>
+            <li>Credits</li>
+            <li>Payments</li>
+            <li>Profile</li>
+          </ul>
+        </div>
+
+        <div className="flex-1 p-6">{props.children}</div>
+      </div>
     </div>
   );
 };

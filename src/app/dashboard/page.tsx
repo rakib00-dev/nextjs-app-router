@@ -3,7 +3,9 @@ import React from 'react';
 const DashboardPage: React.FC = (props) => {
   return (
     <>
-      <div className="text-4xl">I am a dashboard</div>
+      <div className="text-4xl">
+        <h1>I am a dashboard</h1>
+      </div>
     </>
   );
 };
