@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 interface DashboardLayoutProps {
@@ -10,10 +11,18 @@ const layout = (props: DashboardLayoutProps) => {
       <nav className="bg-black flex text-white py-4 px-5  justify-between items-center">
         <h3 className="text-xl">Logo</h3>
         <ul className="flex items-center gap-8">
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Login</li>
+          <li>
+            <Link href={'/dashboard'}>Home</Link>
+          </li>
+          <li>
+            <Link href={'/dashboard/todos'}>Todos</Link>
+          </li>
+          <li>
+            <Link href={'/dashboard/users'}>Users</Link>
+          </li>
+          <li>
+            <Link href={'/dashboard/profile'}>Profile</Link>
+          </li>
         </ul>
       </nav>
 
