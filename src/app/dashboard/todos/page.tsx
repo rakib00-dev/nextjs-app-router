@@ -1,6 +1,6 @@
-import React from 'react';
+import type { NextPage } from 'next';
 
-const TodosPage: React.FC = (props) => {
+const TodosPage: NextPage = (props) => {
   return (
     <>
       <div className="text-4xl">I am a todosPage</div>
