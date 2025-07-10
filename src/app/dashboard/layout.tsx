@@ -11,28 +11,28 @@ const layout = (props: DashboardLayoutProps) => {
       <nav className="bg-black flex text-white py-4 px-5  justify-between items-center">
         <h3 className="text-xl">Logo</h3>
         <ul className="flex items-center gap-8">
-          <li>
-            <Link href={'/dashboard'}>Home</Link>
-          </li>
-          <li>
-            <Link href={'/dashboard/todos'}>Todos</Link>
-          </li>
-          <li>
-            <Link href={'/dashboard/users'}>Users</Link>
-          </li>
-          <li>
-            <Link href={'/dashboard/profile'}>Profile</Link>
-          </li>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Login</li>
         </ul>
       </nav>
 
       <div className="flex">
         <div className="h-screen bg-black w-[15vw] text-white text-2xl">
           <ul className="pt-5 flex flex-col gap-5 px-3">
-            <li>Dashboard</li>
-            <li>Credits</li>
-            <li>Payments</li>
-            <li>Profile</li>
+            <li>
+              <Link href={'/dashboard'}>Dashboard</Link>
+            </li>
+            <li>
+              <Link href={'/dashboard/todos'}>Todos</Link>
+            </li>
+            <li>
+              <Link href={'/dashboard/users'}>users</Link>
+            </li>
+            <li>
+              <Link href={'/dashboard/profile'}>Profile</Link>
+            </li>
           </ul>
         </div>
 
