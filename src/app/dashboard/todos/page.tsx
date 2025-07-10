@@ -1,5 +1,7 @@
 async function fetchAllData() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
+  const res = await fetch('https://jsonplaceholder.typicode.com/users', {
+    cache: 'no-cache',
+  });
   return await res.json();
 }
 
@@ -8,7 +10,15 @@ const TodosPage = async () => {
   return (
     <>
       <div className="text-4xl">I am a todosPage</div>
-      <pre>{JSON.stringify(todos)}</pre>
+      {todos &&
+        todos?.map((e: any) => (
+          <div
+            className="p-4 border-gray-700 shadow-lg mb-4 rounded-xl"
+            key={e.id}
+          >
+            <h4>{e.name}</h4>
+          </div>
+        ))}
     </>
   );
 };

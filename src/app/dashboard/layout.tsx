@@ -36,7 +36,9 @@ const layout = (props: DashboardLayoutProps) => {
           </ul>
         </div>
 
-        <div className="flex-1 p-6">{props.children}</div>
+        <div className="flex-1 p-6 max-h-screen overflow-scroll">
+          {props.children}
+        </div>
       </div>
     </div>
   );
